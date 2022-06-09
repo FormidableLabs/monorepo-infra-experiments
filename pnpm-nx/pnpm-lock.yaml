@@ -20,6 +20,9 @@ importers:
     dependencies:
       '@formidable/dogs': 1.2.0
 
+  packages/core:
+    specifiers: {}
+
   packages/milo:
     specifiers:
       '@formidable/dogs': ^1.2.0
@@ -29,8 +32,10 @@ importers:
   packages/rusty:
     specifiers:
       '@formidable/dogs': ^1.2.0
+      '@formidable/monorepo-tools-pnpm-nx-dogs-core': ^0.0.1
     dependencies:
       '@formidable/dogs': 1.2.0
+      '@formidable/monorepo-tools-pnpm-nx-dogs-core': link:../core
 
 packages:
 

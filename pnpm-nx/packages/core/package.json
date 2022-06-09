@@ -21,7 +21,7 @@
   },
   "scripts": {
     "build": "pnpm run build:esm && pnpm run build:cjs",
-    "build:esm": "BABEL_ENV=es babel src --out-dir es --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js",
-    "build:cjs": "BABEL_ENV=lib babel src --out-dir lib --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js"
+    "build:esm": "babel src --out-dir es --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js",
+    "build:cjs": "BABEL_ENV=commonjs babel src --out-dir lib --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js"
   }
 }

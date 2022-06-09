@@ -1,8 +1,9 @@
 {
-  "name": "@formidable/monorepo-tools-pnpm-tr-dogs-core",
+  "name": "pnpm-nx",
   "version": "0.0.1",
-  "description": "Core library",
-  "main": "lib/index.js",
+  "description": "PNPM + nx",
+  "main": "index.js",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FormidableLabs/monorepo-infra-experiments.git"
@@ -13,12 +14,10 @@
     "url": "https://github.com/FormidableLabs/monorepo-infra-experiments/issues"
   },
   "homepage": "https://github.com/FormidableLabs/monorepo-infra-experiments#readme",
-  "exports": {
-    ".": {
-      "import": "./es/index.js",
-      "default": "./lib/index.js"
-    }
-  },
-  "scripts": {
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.2",
+    "@babel/plugin-transform-modules-commonjs": "^7.18.2",
+    "@babel/preset-typescript": "^7.17.12"
   }
 }

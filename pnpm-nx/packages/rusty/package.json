@@ -1,9 +1,8 @@
 {
-  "name": "pnpm-turborepo",
+  "name": "@formidable/monorepo-tools-pnpm-nx-dogs-rusty",
   "version": "0.0.1",
-  "description": "PNPM + TurboRepo",
-  "main": "index.js",
-  "private": true,
+  "description": "Rusty",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FormidableLabs/monorepo-infra-experiments.git"
@@ -14,9 +13,14 @@
     "url": "https://github.com/FormidableLabs/monorepo-infra-experiments/issues"
   },
   "homepage": "https://github.com/FormidableLabs/monorepo-infra-experiments#readme",
-  "devDependencies": {
-    "@babel/core": "^7.18.2",
-    "@babel/plugin-transform-modules-commonjs": "^7.18.2",
-    "@babel/preset-typescript": "^7.17.12"
+  "exports": {
+    ".": {
+      "import": "./es/index.js",
+      "default": "./lib/index.js"
+    }
+  },
+  "scripts": {},
+  "dependencies": {
+    "@formidable/dogs": "^1.2.0"
   }
 }

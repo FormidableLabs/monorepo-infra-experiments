@@ -1,7 +1,7 @@
 {
-  "name": "@formidable/monorepo-tools-pnpm-tr-dogs-rusty",
+  "name": "@formidable/monorepo-tools-pnpm-nx-dogs-beau",
   "version": "0.0.1",
-  "description": "Rusty",
+  "description": "Beau",
   "main": "lib/index.js",
   "repository": {
     "type": "git",

@@ -9,4 +9,4 @@ This project aims to try various monorepo tools with an eye towards:
 
 ## Experiments
 
-- [PNPM + TurboRepo](./pnpm-turborepo)
+- [PNPM + nx](./pnpm-nx)

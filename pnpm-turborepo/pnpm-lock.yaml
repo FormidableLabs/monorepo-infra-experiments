@@ -12,6 +12,24 @@ importers:
       '@babel/plugin-transform-modules-commonjs': 7.18.2_@babel+core@7.18.2
       '@babel/preset-typescript': 7.17.12_@babel+core@7.18.2
 
+  packages/beau:
+    specifiers:
+      '@formidable/dogs': ^1.2.0
+    dependencies:
+      '@formidable/dogs': 1.2.0
+
+  packages/milo:
+    specifiers:
+      '@formidable/dogs': ^1.2.0
+    dependencies:
+      '@formidable/dogs': 1.2.0
+
+  packages/rusty:
+    specifiers:
+      '@formidable/dogs': ^1.2.0
+    dependencies:
+      '@formidable/dogs': 1.2.0
+
 packages:
 
   /@ampproject/remapping/2.2.0:
@@ -318,6 +336,10 @@ packages:
       '@babel/helper-validator-identifier': 7.16.7
       to-fast-properties: 2.0.0
     dev: true
+
+  /@formidable/dogs/1.2.0:
+    resolution: {integrity: sha512-WmPhiW6cfFyFvOuSr79M8iIt922Euj0ozLFTAA+zaIcfgZ1Xm61+cXx7wqUrX10IK/MMsjkqTNRgGMHWnzKG2Q==}
+    dev: false
 
   /@jridgewell/gen-mapping/0.1.1:
     resolution: {integrity: sha512-sQXCasFk+U8lWYEe66WxRDOE9PjVz4vSM51fTu3Hw+ClTpUSQb718772vH3pyS5pShp6lvQM7SxgIDXXXmOX7w==}

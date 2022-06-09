@@ -19,6 +19,8 @@
       "default": "./lib/index.js"
     }
   },
-  "scripts": {
+  "scripts": {},
+  "dependencies": {
+    "@formidable/dogs": "^1.2.0"
   }
 }

@@ -1,0 +1,24 @@
+{
+  "name": "@formidable/monorepo-tools-pnpm-tr-dogs-rusty",
+  "version": "0.0.1",
+  "description": "Rusty",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FormidableLabs/monorepo-infra-experiments.git"
+  },
+  "author": "Ryan Roemer <ryan.roemer@formidable.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FormidableLabs/monorepo-infra-experiments/issues"
+  },
+  "homepage": "https://github.com/FormidableLabs/monorepo-infra-experiments#readme",
+  "exports": {
+    ".": {
+      "import": "./es/index.js",
+      "default": "./lib/index.js"
+    }
+  },
+  "scripts": {
+  }
+}

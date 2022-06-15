@@ -1,7 +1,7 @@
 {
-  "name": "@formidable/monorepo-tools-pnpm-nx-dogs-beau",
+  "name": "@formidable/monorepo-tools-pnpm-dogs-milo",
   "version": "0.0.1",
-  "description": "Beau",
+  "description": "Milo",
   "main": "lib/index.js",
   "repository": {
     "type": "git",

@@ -1,7 +1,7 @@
 {
-  "name": "@formidable/monorepo-tools-pnpm-nx-dogs-milo",
+  "name": "@formidable/monorepo-tools-pnpm-dogs-rusty",
   "version": "0.0.1",
-  "description": "Milo",
+  "description": "Rusty",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
@@ -19,8 +19,13 @@
       "default": "./lib/index.js"
     }
   },
-  "scripts": {},
+  "scripts": {
+    "build": "pnpm run build:esm && pnpm run build:cjs",
+    "build:esm": "babel src --out-dir es --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js",
+    "build:cjs": "BABEL_ENV=commonjs babel src --out-dir lib --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js"
+  },
   "dependencies": {
-    "@formidable/dogs": "^1.2.0"
+    "@formidable/dogs": "^1.2.0",
+    "@formidable/monorepo-tools-pnpm-dogs-core": "^0.0.1"
   }
 }

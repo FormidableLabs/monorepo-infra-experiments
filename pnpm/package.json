@@ -1,7 +1,7 @@
 {
-  "name": "pnpm-nx",
+  "name": "pnpm",
   "version": "0.0.1",
-  "description": "PNPM + nx",
+  "description": "PNPM",
   "main": "index.js",
   "private": true,
   "repository": {

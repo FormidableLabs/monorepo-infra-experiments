@@ -32,10 +32,10 @@ importers:
   packages/rusty:
     specifiers:
       '@formidable/dogs': ^1.2.0
-      '@formidable/monorepo-tools-pnpm-nx-dogs-core': ^0.0.1
+      '@formidable/monorepo-tools-pnpm-dogs-core': ^0.0.1
     dependencies:
       '@formidable/dogs': 1.2.0
-      '@formidable/monorepo-tools-pnpm-nx-dogs-core': link:../core
+      '@formidable/monorepo-tools-pnpm-dogs-core': link:../core
 
 packages:
 

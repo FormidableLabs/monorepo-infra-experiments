@@ -1,6 +1,6 @@
 {
   "name": "@formidable/monorepo-tools-pnpm-dogs-core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Core library",
   "main": "lib/index.js",
   "repository": {

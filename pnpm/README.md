@@ -31,8 +31,8 @@ $ pnpm -r exec node lib/index.js
 $ pnpm -r --filter='./packages/**' publish --dry-run
 
 # Initial publish
-$ pnpm -r --filter='./packages/**' publish --access=public
+$ pnpm -r --filter='./packages/**' publish --access=public --otp=<INSERT_OTP>
 
 # Normal publish
-$ pnpm -r --filter='./packages/**' publish
+$ pnpm -r --filter='./packages/**' publish --otp=<INSERT_OTP>
 ```

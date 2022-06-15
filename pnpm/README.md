@@ -30,6 +30,9 @@ $ pnpm -r exec node lib/index.js
 # Test out
 $ pnpm -r --filter='./packages/**' publish --dry-run
 
-# Publish
+# Initial publish
+$ pnpm -r --filter='./packages/**' publish --access=public
+
+# Normal publish
 $ pnpm -r --filter='./packages/**' publish
 ```

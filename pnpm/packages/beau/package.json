@@ -1,6 +1,6 @@
 {
   "name": "@formidable/monorepo-tools-pnpm-dogs-beau",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Beau",
   "bin": "./lib/index.js",
   "main": "lib/index.js",

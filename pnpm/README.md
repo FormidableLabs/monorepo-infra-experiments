@@ -23,3 +23,13 @@ See some doggo info:
 ```sh
 $ pnpm -r exec node lib/index.js
 ```
+
+## Publishing
+
+```sh
+# Test out
+$ pnpm -r --filter='./packages/**' publish --dry-run
+
+# Publish
+$ pnpm -r --filter='./packages/**' publish
+```

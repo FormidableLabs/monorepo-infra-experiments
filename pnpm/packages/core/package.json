@@ -2,6 +2,7 @@
   "name": "@formidable/monorepo-tools-pnpm-dogs-core",
   "version": "0.0.2",
   "description": "Core library",
+  "bin": "./lib/index.js",
   "main": "lib/index.js",
   "repository": {
     "type": "git",

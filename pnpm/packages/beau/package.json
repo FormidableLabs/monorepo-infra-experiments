@@ -2,6 +2,7 @@
   "name": "@formidable/monorepo-tools-pnpm-dogs-beau",
   "version": "0.0.2",
   "description": "Beau",
+  "bin": "./lib/index.js",
   "main": "lib/index.js",
   "repository": {
     "type": "git",

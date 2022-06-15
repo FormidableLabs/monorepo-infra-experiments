@@ -15,7 +15,7 @@
   },
   "homepage": "https://github.com/FormidableLabs/monorepo-infra-experiments#readme",
   "scripts": {
-    "build": "pnpm -r --filter='./packages/**' run build"
+    "build": "pnpm -r run build"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.10",

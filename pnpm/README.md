@@ -28,11 +28,11 @@ $ pnpm -r exec node lib/index.js
 
 ```sh
 # Test out
-$ pnpm -r --filter='./packages/**' publish --dry-run
+$ pnpm -r publish --dry-run
 
 # Initial publish
-$ pnpm -r --filter='./packages/**' publish --access=public --otp=<INSERT_OTP>
+$ pnpm -r publish --access=public --otp=<INSERT_OTP>
 
 # Normal publish
-$ pnpm -r --filter='./packages/**' publish --otp=<INSERT_OTP>
+$ pnpm -r publish --otp=<INSERT_OTP>
 ```

@@ -30,6 +30,8 @@ jobs:
           ls
 
       - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
@@ -39,8 +41,6 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
-        with:
-          version: 7
 
       - name: Build
         run: pnpm run build

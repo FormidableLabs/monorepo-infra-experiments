@@ -22,6 +22,9 @@ jobs:
         node-version: [18.x]
 
     steps:
+      # TODO: REMOVE DEBUG
+      - run: echo $PWD
+
       - uses: actions/checkout@v2
 
       - uses: pnpm/action-setup@v2.2.2

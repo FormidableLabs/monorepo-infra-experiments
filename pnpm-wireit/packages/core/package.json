@@ -22,7 +22,19 @@
   },
   "scripts": {
     "build": "pnpm run build:esm && pnpm run build:cjs",
-    "build:esm": "babel src --out-dir es --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js",
-    "build:cjs": "BABEL_ENV=commonjs babel src --out-dir lib --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js"
+    "build:esm": "wireit",
+    "build:cjs": "wireit"
+  },
+  "wireit": {
+    "build:esm": {
+      "command": "babel src --out-dir es --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js",
+      "files": ["src/**"],
+      "output": ["es/**"]
+    },
+    "build:cjs": {
+      "command": "BABEL_ENV=commonjs babel src --out-dir lib --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js",
+      "files": ["src/**"],
+      "output": ["lib/**"]
+    }
   }
 }

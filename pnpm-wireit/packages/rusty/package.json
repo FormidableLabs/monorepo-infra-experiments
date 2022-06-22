@@ -1,0 +1,32 @@
+{
+  "name": "@formidable/monorepo-tools-pnpm-wireit-dogs-rusty",
+  "version": "0.0.3",
+  "description": "Rusty",
+  "bin": "./lib/index.js",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FormidableLabs/monorepo-infra-experiments.git"
+  },
+  "author": "Ryan Roemer <ryan.roemer@formidable.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FormidableLabs/monorepo-infra-experiments/issues"
+  },
+  "homepage": "https://github.com/FormidableLabs/monorepo-infra-experiments#readme",
+  "exports": {
+    ".": {
+      "import": "./es/index.js",
+      "default": "./lib/index.js"
+    }
+  },
+  "scripts": {
+    "build": "pnpm run build:esm && pnpm run build:cjs",
+    "build:esm": "babel src --out-dir es --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js",
+    "build:cjs": "BABEL_ENV=commonjs babel src --out-dir lib --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js"
+  },
+  "dependencies": {
+    "@formidable/dogs": "^1.2.0",
+    "@formidable/monorepo-tools-pnpm-wireit-dogs-core": "^0.0.3"
+  }
+}

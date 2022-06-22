@@ -1,7 +1,7 @@
 {
-  "name": "pnpm",
+  "name": "pnpm-wireit",
   "version": "0.0.3",
-  "description": "PNPM",
+  "description": "PNPM + Wireit",
   "main": "index.js",
   "private": true,
   "repository": {

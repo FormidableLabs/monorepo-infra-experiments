@@ -1,0 +1,29 @@
+{
+  "name": "pnpm-wireit",
+  "version": "0.0.3",
+  "description": "PNPM + Wireit",
+  "main": "index.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FormidableLabs/monorepo-infra-experiments.git"
+  },
+  "author": "Ryan Roemer <ryan.roemer@formidable.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FormidableLabs/monorepo-infra-experiments/issues"
+  },
+  "homepage": "https://github.com/FormidableLabs/monorepo-infra-experiments#readme",
+  "scripts": {
+    "build": "pnpm -r run build"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.2",
+    "@babel/plugin-transform-modules-commonjs": "^7.18.2",
+    "@babel/preset-typescript": "^7.17.12"
+  },
+  "dependencies": {
+    "@babel/preset-react": "^7.17.12"
+  }
+}

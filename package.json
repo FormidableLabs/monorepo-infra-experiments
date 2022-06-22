@@ -1,5 +1,11 @@
 {
   "name": "monorepo-infra-experiments",
   "version": "0.0.0",
-  "private": true
+  "private": true,
+  "scripts": {
+    "gen:clean": "rm -rf */packages/*/src/gen",
+    "gen:cli": "node ./scripts/generate-files.js",
+    "gen:pnpm": "pnpm gen:cli --pkgs pnpm/packages --num 10",
+    "generate": "pnpm gen:clean && pnpm gen:pnpm"
+  }
 }

@@ -14,13 +14,12 @@ const error = (...args) => console.error(...args); // eslint-disable-line no-con
 
 // Directory to place files
 const GEN_DIR = "gen";
-const fileName = ({ name, i }) => `${name}-${i}.tsx`;
-const fileTmpl = ({ name, i }) => `
+const fileName = ({ name, num }) => `${name}-${num}.tsx`;
+const fileTmpl = ({ name, num }) => `
 const NAME = "${name}";
-const NUM = ${i};
+const NUM = ${num};
 
-const ${name}${i}Element = () => (<div>Hello, {NAME}! You're number {NUM}</div>);
-export ${name}${i}Element;
+export const ${name}${num}Element = () => (<div>Hello, {NAME}! You're number {NUM}</div>);
 `;
 
 // ============================================================================
@@ -41,17 +40,38 @@ Examples:
 
 const help = async () => { log(USAGE); };
 const generate = async ({ pkgsPath, pkgsDirs, numFiles, dryRun }) => {
-  const files = [];
+  const allFiles = [];
   for (const name of pkgsDirs) {
-    for (let i = 0; i < numFiles; i++) {
-      files.push({
-        path: path.join(pkgsPath, name, "src", GEN_DIR, fileName({ name, i })),
-        code: fileTmpl({ name, i })
-      });
+    const files = [];
+    const genDir = path.join(pkgsPath, name, "src", GEN_DIR);
+    // Create gen directory.
+    if (!dryRun) {
+      await fs.mkdir(genDir, { recursive: true });
     }
+
+    for (let num = 0; num < numFiles; num++) {
+      const file = {
+        name,
+        num,
+        filePath: path.join(genDir, fileName({ name, num })),
+        code: fileTmpl({ name, num })
+      };
+      files.push(file);
+      allFiles.push(file);
+    }
+
+    if (!dryRun) {
+      await Promise.all(files.map(({ filePath, code }) => fs.writeFile(filePath, code)));
+    }
+
+    log(`- ${dryRun ? "Would generate" : "Generated"} ${numFiles} `
+      + `to ${path.relative(process.cwd(), genDir)}`);
   }
 
-  log("TODO IMPLEMENT", { pkgsDirs, numFiles, dryRun, files });
+  if (dryRun) {
+    log("\n Files to generate:");
+    allFiles.forEach(({ filePath }) => { log(`- ${filePath}`); });
+  }
 };
 
 // ============================================================================

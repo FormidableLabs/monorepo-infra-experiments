@@ -1,5 +1,5 @@
 module.exports = {
-  presets: ["@babel/preset-typescript"],
+  presets: ["@babel/preset-typescript", "@babel/preset-react"],
   ignore: ["**/*.d.ts"],
   env: {
     commonjs: {

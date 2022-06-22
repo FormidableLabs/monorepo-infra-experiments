@@ -22,5 +22,8 @@
     "@babel/core": "^7.18.2",
     "@babel/plugin-transform-modules-commonjs": "^7.18.2",
     "@babel/preset-typescript": "^7.17.12"
+  },
+  "dependencies": {
+    "@babel/preset-react": "^7.17.12"
   }
 }

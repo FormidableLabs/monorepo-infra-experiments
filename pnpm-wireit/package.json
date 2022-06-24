@@ -15,14 +15,17 @@
   },
   "homepage": "https://github.com/FormidableLabs/monorepo-infra-experiments#readme",
   "scripts": {
-    "build": "pnpm -r run build"
+    "build": "pnpm -r run build",
+    "pkg:build:esm": "babel src --out-dir es --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js",
+    "pkg:build:cjs": "BABEL_ENV=commonjs babel src --out-dir lib --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.10",
     "@babel/core": "^7.18.2",
     "@babel/plugin-transform-modules-commonjs": "^7.18.2",
-    "@babel/preset-typescript": "^7.17.12",
     "@babel/preset-react": "^7.17.12",
+    "@babel/preset-typescript": "^7.17.12",
+    "nps": "^5.10.0",
     "wireit": "^0.7.0"
   }
 }

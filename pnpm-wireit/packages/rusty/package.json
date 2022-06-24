@@ -21,9 +21,26 @@
     }
   },
   "scripts": {
-    "build": "pnpm run build:esm && pnpm run build:cjs",
-    "build:esm": "babel src --out-dir es --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js",
-    "build:cjs": "BABEL_ENV=commonjs babel src --out-dir lib --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js"
+    "build": "wireit",
+    "build:esm": "wireit",
+    "build:cjs": "wireit"
+  },
+  "wireit": {
+    "build": {
+      "dependencies": ["build:esm", "build:cjs"]
+    },
+    "build:esm": {
+      "command": "nps pkg:build:esm",
+      "files": ["src/**", "../../.babelrc.js"],
+      "output": ["es/**"],
+      "dependencies": ["../core:build"]
+    },
+    "build:cjs": {
+      "command": "nps pkg:build:cjs",
+      "files": ["src/**", "../../.babelrc.js"],
+      "output": ["lib/**"],
+      "dependencies": ["../core:build"]
+    }
   },
   "dependencies": {
     "@formidable/dogs": "^1.2.0",

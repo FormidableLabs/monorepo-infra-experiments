@@ -32,14 +32,12 @@
     "build:esm": {
       "command": "babel src --out-dir es --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js",
       "files": ["src/**", "../../.babelrc.js"],
-      "output": ["es/**"],
-      "clean": "if-file-deleted"
+      "output": ["es/**"]
     },
     "build:cjs": {
       "command": "BABEL_ENV=commonjs babel src --out-dir lib --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js",
       "files": ["src/**", "../../.babelrc.js"],
-      "output": ["lib/**"],
-      "clean": "if-file-deleted"
+      "output": ["lib/**"]
     }
   }
 }

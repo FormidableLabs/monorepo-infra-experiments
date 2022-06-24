@@ -5,8 +5,8 @@
   "scripts": {
     "gen:clean": "rm -rf */packages/*/src/gen",
     "gen:cli": "node ./scripts/generate-files.js",
-    "gen:pnpm": "pnpm gen:cli --pkgs pnpm/packages --num 10",
-    "gen:pnpm-wireit": "pnpm gen:cli --pkgs pnpm-wireit/packages --num 10",
+    "gen:pnpm": "pnpm gen:cli --pkgs pnpm/packages --num 20",
+    "gen:pnpm-wireit": "pnpm gen:cli --pkgs pnpm-wireit/packages --num 20",
     "generate": "pnpm gen:clean && pnpm gen:pnpm && pnpm gen:pnpm-wireit"
   }
 }

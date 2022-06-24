@@ -16,6 +16,7 @@
   "homepage": "https://github.com/FormidableLabs/monorepo-infra-experiments#readme",
   "scripts": {
     "build": "pnpm -r run build",
+    "build:watch": "pnpm --parallel run build --watch",
     "pkg:build:esm": "babel src --out-dir es --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js",
     "pkg:build:cjs": "BABEL_ENV=commonjs babel src --out-dir lib --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js"
   },

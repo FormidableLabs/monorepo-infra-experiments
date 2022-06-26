@@ -23,13 +23,9 @@
   "scripts": {
     "build": "wireit",
     "build:esm": "wireit",
-    "build:cjs": "wireit",
-    "tmp": "wireit"
+    "build:cjs": "wireit"
   },
   "wireit": {
-    "tmp": {
-      "command": "nps pkg:build:esm"
-    },
     "build": {
       "dependencies": ["build:esm", "build:cjs"]
     },

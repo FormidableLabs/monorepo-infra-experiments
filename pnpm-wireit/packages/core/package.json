@@ -24,7 +24,6 @@
     "build": "wireit",
     "build:esm": "wireit",
     "build:cjs": "wireit",
-    "clean": "nps pkg:clean",
     "tmp": "wireit"
   },
   "wireit": {

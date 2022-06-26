@@ -17,8 +17,10 @@
   "scripts": {
     "build": "pnpm -r run build",
     "build:watch": "pnpm --parallel run build --watch",
+    "clean": "pnpm --parallel run clean",
     "pkg:build:esm": "babel src --out-dir es --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js",
-    "pkg:build:cjs": "BABEL_ENV=commonjs babel src --out-dir lib --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js"
+    "pkg:build:cjs": "BABEL_ENV=commonjs babel src --out-dir lib --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js",
+    "pkg:clean": "rm -rf es lib"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.10",

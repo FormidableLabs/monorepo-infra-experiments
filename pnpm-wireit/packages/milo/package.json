@@ -23,7 +23,8 @@
   "scripts": {
     "build": "wireit",
     "build:esm": "wireit",
-    "build:cjs": "wireit"
+    "build:cjs": "wireit",
+    "clean": "nps pkg:clean"
   },
   "wireit": {
     "build": {

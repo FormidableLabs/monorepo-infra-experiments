@@ -1,7 +1,15 @@
 /**
- * We're only using `nps` as a proxy for scripts in root `package.json` to
- * make them available within a workspace.
+ * We only use `nps` for scripts that we:
+ * 1. define at the root of the monorepo
+ * 2. that are meant to execute _within_ a workspace
+ *
+ * If you have an actual root task, define it in root `package.json:scripts`.
  */
-const { scripts } = require("./package.json");
 
-module.exports = { scripts };
+module.exports = {
+  scripts: {
+    "build:esm": "babel src --out-dir es --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js",
+    "build:cjs": "BABEL_ENV=commonjs babel src --out-dir lib --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js",
+    "clean": "rm -rf es lib"
+  }
+};

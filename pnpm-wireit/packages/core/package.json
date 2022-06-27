@@ -30,12 +30,12 @@
       "dependencies": ["build:esm", "build:cjs"]
     },
     "build:esm": {
-      "command": "nps pkg:build:esm",
+      "command": "nps build:esm",
       "files": ["src/**", "../../.babelrc.js"],
       "output": ["es/**"]
     },
     "build:cjs": {
-      "command": "nps pkg:build:cjs",
+      "command": "nps build:cjs",
       "files": ["src/**", "../../.babelrc.js"],
       "output": ["lib/**"]
     }

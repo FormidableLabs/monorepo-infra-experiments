@@ -48,5 +48,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Generate lots of source files for build time assessment
+        run: pnpm run generate
+        working-directory: ./
+
       - name: Build
         run: pnpm run build

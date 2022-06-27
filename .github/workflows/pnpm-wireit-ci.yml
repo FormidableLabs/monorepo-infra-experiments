@@ -28,6 +28,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+          cache: true
+
+      # Wireit cache
+      - uses: google/wireit@setup-github-actions-caching/v1
 
       - uses: pnpm/action-setup@v2.2.2
         with:
@@ -47,6 +51,10 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
+
+      - name: Generate lots of source files for build time assessment
+        run: pnpm run generate
+        working-directory: ./
 
       - name: Build
         run: pnpm run build

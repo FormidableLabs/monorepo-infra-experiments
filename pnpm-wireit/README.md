@@ -15,8 +15,11 @@ $ pnpm install
 Build:
 
 ```sh
-# TODO: UPDATE
+# Run build across all packages.
 $ pnpm run build
+
+# Watch build in all packages
+$ pnpm run build:watch
 ```
 
 See some doggo info:

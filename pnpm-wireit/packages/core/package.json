@@ -21,16 +21,11 @@
     }
   },
   "scripts": {
-    "version": "wireit",
     "build": "wireit",
     "build:esm": "wireit",
     "build:cjs": "wireit"
   },
   "wireit": {
-    "version": {
-      "command": "changeset version",
-      "dependencies": ["build"]
-    },
     "build": {
       "dependencies": ["build:esm", "build:cjs"]
     },

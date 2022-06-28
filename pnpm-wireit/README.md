@@ -40,7 +40,15 @@ When you would like to add a changeset (which creates a file indicating the type
 $ pnpm changeset add
 ```
 
-to produce an interactive menu of which packages to include in the change and appropriate messages / semver version.
+to produce an interactive menu. Navigate the packages with arrow keys and hit `<space>` to select 1+ packages. Hit `<return>` when done. Select semver versions for packages and add appropriate messages. From there, you'll get a summary to approve. After this, you'll see a new uncommitted file in `.changesets` like:
+
+```sh
+$ git status
+# ....
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.changeset/flimsy-pandas-marry.md
+```
 
 TODO: HERE
 - [ ] Add changeset

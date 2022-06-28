@@ -59,7 +59,7 @@ _CI Note_: Our process is to batch up appropriate changes and then do these step
 When all of the changes and changesets are ready for a new version, issue the following wrapper command:
 
 ```sh
-$ pnpm run version
+$ pnpm changeset version
 ```
 
 which should bump versions and write workspace CHANGELOG.md files ass appropriate. Review the git changes as appropriate, adjust anything amiss, and commit to git source.
@@ -68,7 +68,16 @@ which should bump versions and write workspace CHANGELOG.md files ass appropriat
 
 _CI Note_: This typically happens in CI via a merge to default branch and not run by on the command line unless we're fixing something.
 
-You can publish with the following
+You can publish with the following:
+
+First, build necessary files:
+
+```sh
+# Build everything
+$ pnpm run clean && pnpm run build
+```
+
+Then publish:
 
 ```sh
 # Test out
@@ -78,7 +87,7 @@ $ pnpm -r publish --dry-run
 $ pnpm changeset publish --otp=<insert otp code>
 ```
 
-and issue the following to also push git tags
+Then issue the following to also push git tags:
 
 ```sh
 $ git push && git push --tags

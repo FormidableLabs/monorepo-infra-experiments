@@ -15,7 +15,6 @@
   },
   "homepage": "https://github.com/FormidableLabs/monorepo-infra-experiments#readme",
   "scripts": {
-    "version": "pnpm run clean && pnpm run build && pnpm changeset version",
     "build": "pnpm -r run build",
     "build:watch": "pnpm --parallel run build --watch",
     "clean": "pnpm --parallel exec nps clean"

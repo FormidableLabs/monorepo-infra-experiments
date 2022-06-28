@@ -30,7 +30,7 @@ $ pnpm -r exec node lib/index.js
 
 ## Releases
 
-We use [changesets](https://github.com/changesets/changesets) to create changes, add to our CHANGELOG.md, and publish. We automate the actual release of this package, but here are some manual steps in case you need to out-of-band do this:
+We use [changesets](https://github.com/changesets/changesets) to create changes, add to workspace CHANGELOG.md files, and publish. We automate the actual release of this package, but here are some manual steps in case you need to out-of-band do this:
 
 ### Add a changeset
 
@@ -60,10 +60,11 @@ When all of the changes and changesets are ready for a new version, issue the fo
 $ pnpm version
 ```
 
-TODO: HERE
-- [ ] Add changeset
-- [ ] Version
-- [ ] Publish with pnpm
+which should bump versions and write workspace CHANGELOG.md files ass appropriate.
+
+### Publish
+
+TODO HERE
 
 ```sh
 # Test out

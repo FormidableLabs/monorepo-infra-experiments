@@ -68,15 +68,18 @@ which should bump versions and write workspace CHANGELOG.md files ass appropriat
 
 _CI Note_: This typically happens in CI via a merge to default branch and not run by on the command line unless we're fixing something.
 
-TODO HERE
+You can publish with the following
 
 ```sh
 # Test out
 $ pnpm -r publish --dry-run
 
-# Initial publish
-$ pnpm -r publish --access=public --otp=<INSERT_OTP>
-
 # Normal publish
-$ pnpm -r publish --otp=<INSERT_OTP>
+$ pnpm changeset publish --otp=<insert otp code>
+```
+
+and issue the following to also push git tags
+
+```sh
+$ git push && git push --tags
 ```

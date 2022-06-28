@@ -1,0 +1,6 @@
+name: PNPM + Wireit Release
+
+defaults:
+  run:
+    working-directory: ./pnpm-wireit
+

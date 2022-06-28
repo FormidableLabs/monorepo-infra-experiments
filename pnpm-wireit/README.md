@@ -28,7 +28,14 @@ See some doggo info:
 $ pnpm -r exec node lib/index.js
 ```
 
-## Publishing
+## Releases
+
+We use [changesets](https://github.com/changesets/changesets) to create changes, add to our CHANGELOG.md, and publish. We automate the actual release of this package, but here are some manual steps in case you need to out-of-band do this:
+
+TODO: HERE
+- [ ] Add changeset
+- [ ] Version
+- [ ] Publish with pnpm
 
 ```sh
 # Test out

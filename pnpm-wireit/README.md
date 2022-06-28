@@ -50,6 +50,16 @@ Untracked files:
 	.changeset/flimsy-pandas-marry.md
 ```
 
+Review the file, make any necessary adjustments, and commit it to source. When we eventually do a package release, the changeset notes and version will be incorporated!
+
+### Make a version
+
+When all of the changes and changesets are ready for a new version, issue the following wrapper command:
+
+```sh
+$ pnpm version
+```
+
 TODO: HERE
 - [ ] Add changeset
 - [ ] Version

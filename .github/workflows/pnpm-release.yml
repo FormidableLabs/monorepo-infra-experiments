@@ -3,3 +3,5 @@ name: PNPM Release
 defaults:
   run:
     working-directory: ./pnpm
+
+# TODO: Add actions

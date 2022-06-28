@@ -57,7 +57,7 @@ Review the file, make any necessary adjustments, and commit it to source. When w
 When all of the changes and changesets are ready for a new version, issue the following wrapper command:
 
 ```sh
-$ pnpm version
+$ pnpm run version
 ```
 
 which should bump versions and write workspace CHANGELOG.md files ass appropriate.

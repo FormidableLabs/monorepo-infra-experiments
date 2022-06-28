@@ -54,15 +54,19 @@ Review the file, make any necessary adjustments, and commit it to source. When w
 
 ### Make a version
 
+_CI Note_: Our process is to batch up appropriate changes and then do these steps in a dedicated version branch / pull request.
+
 When all of the changes and changesets are ready for a new version, issue the following wrapper command:
 
 ```sh
 $ pnpm run version
 ```
 
-which should bump versions and write workspace CHANGELOG.md files ass appropriate.
+which should bump versions and write workspace CHANGELOG.md files ass appropriate. Review the git changes as appropriate, adjust anything amiss, and commit to git source.
 
 ### Publish
+
+_CI Note_: This typically happens in CI via a merge to default branch and not run by on the command line unless we're fixing something.
 
 TODO HERE
 

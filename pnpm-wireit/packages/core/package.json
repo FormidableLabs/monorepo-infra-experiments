@@ -1,6 +1,6 @@
 {
   "name": "@formidable/monorepo-tools-pnpm-wireit-dogs-core",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Core library",
   "bin": "./lib/index.js",
   "main": "lib/index.js",
@@ -27,17 +27,30 @@
   },
   "wireit": {
     "build": {
-      "dependencies": ["build:esm", "build:cjs"]
+      "dependencies": [
+        "build:esm",
+        "build:cjs"
+      ]
     },
     "build:esm": {
       "command": "nps build:esm",
-      "files": ["src/**", "../../.babelrc.js"],
-      "output": ["es/**"]
+      "files": [
+        "src/**",
+        "../../.babelrc.js"
+      ],
+      "output": [
+        "es/**"
+      ]
     },
     "build:cjs": {
       "command": "nps build:cjs",
-      "files": ["src/**", "../../.babelrc.js"],
-      "output": ["lib/**"]
+      "files": [
+        "src/**",
+        "../../.babelrc.js"
+      ],
+      "output": [
+        "lib/**"
+      ]
     }
   }
 }

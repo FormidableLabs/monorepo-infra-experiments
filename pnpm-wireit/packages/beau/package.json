@@ -1,6 +1,6 @@
 {
   "name": "@formidable/monorepo-tools-pnpm-wireit-dogs-beau",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "Beau",
   "bin": "./lib/index.js",
   "main": "lib/index.js",
@@ -61,6 +61,6 @@
   },
   "dependencies": {
     "@formidable/dogs": "^1.2.0",
-    "@formidable/monorepo-tools-pnpm-wireit-dogs-core": "^0.0.6"
+    "@formidable/monorepo-tools-pnpm-wireit-dogs-core": "^0.1.0"
   }
 }

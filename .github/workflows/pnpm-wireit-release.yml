@@ -24,6 +24,10 @@ jobs:
           node-version: 18.x
           cache: true
 
+      - name: TODO DEBUG REMOVE
+        run: |
+          node -e "console.log('process.cwd(): ', process.cwd())"
+
       # Wireit cache
       - uses: google/wireit@setup-github-actions-caching/v1
 

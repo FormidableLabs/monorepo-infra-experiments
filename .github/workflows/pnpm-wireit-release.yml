@@ -4,8 +4,9 @@ defaults:
   run:
     working-directory: ./pnpm-wireit
 
-# TODO(5): Add actions
 jobs:
   build:
+    runs-on: ubuntu-latest
+
     steps:
       - run: "echo TODO IMPLEMENT CHANGESETS ACTION"

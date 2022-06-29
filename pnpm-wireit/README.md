@@ -75,7 +75,14 @@ On the merge of a version packages PR, the changesets GitHub action will publish
 For exceptional circumstances, here is a quick guide to manually publishing from a local computer using changesets.
 
 1. Add a changeset with `pnpm changeset add`. Add changeset file, review file, tweak, and commit.
-2. Make a version with `pnpm run version`. Review git changes, tweak, and commit.
+2. Make a version. Due to our `changesets/changelog-github` package you will need to create a personal token and pass it to the environment.
+
+    ```sh
+    $ GITHUB_TOKEN=<INSERT TOKEN> pnpm run version
+    ```
+
+    Review git changes, tweak, and commit.
+
 3. Publish.
 
     First, build necessary files:

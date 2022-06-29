@@ -1,5 +1,11 @@
 # @formidable/monorepo-tools-pnpm-wireit-dogs-core
 
+## 0.1.1
+
+### Patch Changes
+
+- [#15](https://github.com/FormidableLabs/monorepo-infra-experiments/pull/15) [`e223ecd`](https://github.com/FormidableLabs/monorepo-infra-experiments/commit/e223ecd105b64dab6d29bc1bd6bf0edd409c0ef7) Thanks [@scottrippey](https://github.com/scottrippey)! - TypeScript: increased type-safety for the `welcome` message
+
 ## 0.1.0
 
 ### Minor Changes

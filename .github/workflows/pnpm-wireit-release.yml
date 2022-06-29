@@ -24,10 +24,6 @@ jobs:
           node-version: 18.x
           cache: true
 
-      - name: TODO DEBUG REMOVE
-        run: |
-          node -e "console.log('process.cwd(): ', process.cwd())"
-
       # Wireit cache
       - uses: google/wireit@setup-github-actions-caching/v1
 
@@ -49,6 +45,11 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
+
+      # TODO(5): Try to package up in build step and re-use that with dependsOn (?)
+      # https://github.com/FormidableLabs/monorepo-infra-experiments/issues/5
+      - name: Build packages
+        run: pnpm run clean && pnpm run build
 
       - name: PR or Publish
         id: changesets

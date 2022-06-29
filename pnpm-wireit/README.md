@@ -30,7 +30,14 @@ $ pnpm -r exec node lib/index.js
 
 ## Releases
 
-We use [changesets](https://github.com/changesets/changesets) to create changes, add to workspace CHANGELOG.md files, and publish. We automate the actual release of this package, but here are some manual steps in case you need to out-of-band do this:
+We use [changesets](https://github.com/changesets/changesets) to create package versions and publish them.
+
+### Using changsets
+
+Our official release path is to use automation to perform the actual publishing of our packages.
+
+<!--
+TODO: WRITE THIS SECTION
 
 ### Add a changeset
 
@@ -64,31 +71,35 @@ $ pnpm run version
 
 which should bump versions and write workspace CHANGELOG.md files. Review the git changes, adjust anything amiss, and commit to git source.
 
-### Publish
+-->
 
-_CI Note_: This typically happens in CI via a merge to default branch and not run by on the command line unless we're fixing something.
+### The manual version
 
-You can publish with the following:
+For exceptional circumstances, here is a quick guide to manually publishing from a local computer using changesets.
 
-First, build necessary files:
+1. Add a changeset with `pnpm changeset add`.
+2. Make a version with `pnpm run version`. Review git changes, tweak, and commit.
+3. Publish.
 
-```sh
-# Build everything
-$ pnpm run clean && pnpm run build
-```
+    First, build necessary files:
 
-Then publish:
+    ```sh
+    # Build everything
+    $ pnpm run clean && pnpm run build
+    ```
 
-```sh
-# Test out
-$ pnpm -r publish --dry-run
+    Then publish:
 
-# Normal publish
-$ pnpm changeset publish --otp=<insert otp code>
-```
+    ```sh
+    # Test things out first
+    $ pnpm -r publish --dry-run
 
-Then issue the following to also push git tags:
+    # The real publish
+    $ pnpm changeset publish --otp=<insert otp code>
+    ```
 
-```sh
-$ git push && git push --tags
-```
+    Then issue the following to also push git tags:
+
+    ```sh
+    $ git push && git push --tags
+    ```

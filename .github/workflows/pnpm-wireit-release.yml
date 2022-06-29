@@ -54,6 +54,8 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
+          # Not needed in normal project. Looks like working-directory is ignored.
+          cwd: ./pnpm-wireit
           version: pnpm run version
           publish: pnpm changeset publish
         env:

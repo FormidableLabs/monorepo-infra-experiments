@@ -30,7 +30,17 @@ $ pnpm -r exec node lib/index.js
 
 ## Releases
 
-We use [changesets](https://github.com/changesets/changesets) to create changes, add to workspace CHANGELOG.md files, and publish. We automate the actual release of this package, but here are some manual steps in case you need to out-of-band do this:
+We use [changesets](https://github.com/changesets/changesets) to create package versions and publish them.
+
+### Using changsets
+
+Our official release path is to use automation to perform the actual publishing of our packages. The steps are to:
+
+1. A human developer adds a changeset. Ideally this is as a part of a PR that will have a version impact on a package.
+2. On merge of a PR our automation system opens a "Version Packages" PR.
+3. On merging the "Version Packages PR, the automation system publishes the packages.
+
+Here are more details:
 
 ### Add a changeset
 
@@ -52,43 +62,50 @@ Untracked files:
 
 Review the file, make any necessary adjustments, and commit it to source. When we eventually do a package release, the changeset notes and version will be incorporated!
 
-### Make a version
+### Creating versions
 
-_CI Note_: Our process is to batch up appropriate changes and then do these steps in a dedicated version branch / pull request.
+On a merge of a feature PR, the changesets GitHub action will open a new PR titled `"Version Packages"`. This PR is automatically kept up to date with additional PRs with changesets. So, if you're not ready to publish yet, just keep merging feature PRs and then merge the version packages PR later.
 
-When all of the changes and changesets are ready for a new version, issue the following wrapper command:
+### Publishing packages
 
-```sh
-$ pnpm run version
-```
+On the merge of a version packages PR, the changesets GitHub action will publish the packages to npm.
 
-which should bump versions and write workspace CHANGELOG.md files. Review the git changes, adjust anything amiss, and commit to git source.
+### The manual version
 
-### Publish
+For exceptional circumstances, here is a quick guide to manually publishing from a local computer using changesets.
 
-_CI Note_: This typically happens in CI via a merge to default branch and not run by on the command line unless we're fixing something.
+1. Add a changeset with `pnpm changeset add`. Add changeset file, review file, tweak, and commit.
+2. Make a version. Due to our `changesets/changelog-github` package you will need to create a personal token and pass it to the environment.
 
-You can publish with the following:
+    ```sh
+    $ GITHUB_TOKEN=<INSERT TOKEN> pnpm run version
+    ```
 
-First, build necessary files:
+    Review git changes, tweak, and commit.
 
-```sh
-# Build everything
-$ pnpm run clean && pnpm run build
-```
+3. Publish.
 
-Then publish:
+    First, build necessary files:
 
-```sh
-# Test out
-$ pnpm -r publish --dry-run
+    ```sh
+    # Build everything
+    $ pnpm run clean && pnpm run build
+    ```
 
-# Normal publish
-$ pnpm changeset publish --otp=<insert otp code>
-```
+    Then publish:
 
-Then issue the following to also push git tags:
+    ```sh
+    # Test things out first
+    $ pnpm -r publish --dry-run
 
-```sh
-$ git push && git push --tags
-```
+    # The real publish
+    $ pnpm changeset publish --otp=<insert otp code>
+    ```
+
+    Note that publishing multiple pacakges via `changeset` to npm with an OTP code can often fail with `429 Too Many Requests` rate limiting error. Take a 5+ minute coffee break, then come back and try again.
+
+    Then issue the following to also push git tags:
+
+    ```sh
+    $ git push && git push --tags
+    ```

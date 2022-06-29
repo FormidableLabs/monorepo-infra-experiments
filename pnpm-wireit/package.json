@@ -15,7 +15,7 @@
   },
   "homepage": "https://github.com/FormidableLabs/monorepo-infra-experiments#readme",
   "scripts": {
-    "version": "pnpm changeset version && pnpm install",
+    "version": "pnpm changeset version && pnpm install --fix-lockfile",
     "build": "pnpm -r run build",
     "build:watch": "pnpm --parallel run build --watch",
     "clean": "pnpm --parallel exec nps clean"
@@ -27,6 +27,7 @@
     "@babel/preset-react": "^7.17.12",
     "@babel/preset-typescript": "^7.17.12",
     "@changesets/cli": "^2.23.0",
+    "@changesets/changelog-github": "^0.4.5",
     "nps": "^5.10.0",
     "wireit": "^0.7.0"
   }

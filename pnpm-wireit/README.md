@@ -62,7 +62,7 @@ When all of the changes and changesets are ready for a new version, issue the fo
 $ pnpm run version
 ```
 
-which should bump versions and write workspace CHANGELOG.md files ass appropriate. Review the git changes as appropriate, adjust anything amiss, and commit to git source.
+which should bump versions and write workspace CHANGELOG.md files. Review the git changes, adjust anything amiss, and commit to git source.
 
 ### Publish
 

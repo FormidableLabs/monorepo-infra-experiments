@@ -4,6 +4,11 @@ defaults:
   run:
     working-directory: ./pnpm-wireit
 
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   build:
     runs-on: ubuntu-latest

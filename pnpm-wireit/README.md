@@ -59,7 +59,7 @@ _CI Note_: Our process is to batch up appropriate changes and then do these step
 When all of the changes and changesets are ready for a new version, issue the following wrapper command:
 
 ```sh
-$ pnpm changeset version
+$ pnpm run version
 ```
 
 which should bump versions and write workspace CHANGELOG.md files ass appropriate. Review the git changes as appropriate, adjust anything amiss, and commit to git source.

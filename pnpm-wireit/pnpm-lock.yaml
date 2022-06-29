@@ -25,7 +25,7 @@ importers:
   packages/beau:
     specifiers:
       '@formidable/dogs': ^1.2.0
-      '@formidable/monorepo-tools-pnpm-wireit-dogs-core': ^0.0.4
+      '@formidable/monorepo-tools-pnpm-wireit-dogs-core': ^0.0.5
     dependencies:
       '@formidable/dogs': 1.2.0
       '@formidable/monorepo-tools-pnpm-wireit-dogs-core': link:../core
@@ -36,7 +36,7 @@ importers:
   packages/milo:
     specifiers:
       '@formidable/dogs': ^1.2.0
-      '@formidable/monorepo-tools-pnpm-wireit-dogs-core': ^0.0.4
+      '@formidable/monorepo-tools-pnpm-wireit-dogs-core': ^0.0.5
     dependencies:
       '@formidable/dogs': 1.2.0
       '@formidable/monorepo-tools-pnpm-wireit-dogs-core': link:../core
@@ -44,7 +44,7 @@ importers:
   packages/rusty:
     specifiers:
       '@formidable/dogs': ^1.2.0
-      '@formidable/monorepo-tools-pnpm-wireit-dogs-core': ^0.0.4
+      '@formidable/monorepo-tools-pnpm-wireit-dogs-core': ^0.0.5
     dependencies:
       '@formidable/dogs': 1.2.0
       '@formidable/monorepo-tools-pnpm-wireit-dogs-core': link:../core

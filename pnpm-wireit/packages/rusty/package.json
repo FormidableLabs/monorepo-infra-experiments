@@ -1,6 +1,6 @@
 {
   "name": "@formidable/monorepo-tools-pnpm-wireit-dogs-rusty",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Rusty",
   "bin": "./lib/index.js",
   "main": "lib/index.js",
@@ -61,6 +61,6 @@
   },
   "dependencies": {
     "@formidable/dogs": "^1.2.0",
-    "@formidable/monorepo-tools-pnpm-wireit-dogs-core": "^0.0.4"
+    "@formidable/monorepo-tools-pnpm-wireit-dogs-core": "^0.0.5"
   }
 }

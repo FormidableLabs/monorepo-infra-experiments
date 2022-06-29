@@ -1,0 +1,11 @@
+name: PNPM + Wireit Release
+
+defaults:
+  run:
+    working-directory: ./pnpm-wireit
+
+# TODO(5): Add actions
+jobs:
+  build:
+    steps:
+      - run: "echo TODO IMPLEMENT CHANGESETS ACTION"

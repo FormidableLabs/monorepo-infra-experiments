@@ -1,6 +1,6 @@
 {
   "name": "@formidable/monorepo-tools-pnpm-wireit-dogs-beau",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Beau",
   "bin": "./lib/index.js",
   "main": "lib/index.js",
@@ -27,23 +27,40 @@
   },
   "wireit": {
     "build": {
-      "dependencies": ["build:esm", "build:cjs"]
+      "dependencies": [
+        "build:esm",
+        "build:cjs"
+      ]
     },
     "build:esm": {
       "command": "nps build:esm",
-      "files": ["src/**", "../../.babelrc.js"],
-      "output": ["es/**"],
-      "dependencies": ["../core:build"]
+      "files": [
+        "src/**",
+        "../../.babelrc.js"
+      ],
+      "output": [
+        "es/**"
+      ],
+      "dependencies": [
+        "../core:build"
+      ]
     },
     "build:cjs": {
       "command": "nps build:cjs",
-      "files": ["src/**", "../../.babelrc.js"],
-      "output": ["lib/**"],
-      "dependencies": ["../core:build"]
+      "files": [
+        "src/**",
+        "../../.babelrc.js"
+      ],
+      "output": [
+        "lib/**"
+      ],
+      "dependencies": [
+        "../core:build"
+      ]
     }
   },
   "dependencies": {
     "@formidable/dogs": "^1.2.0",
-    "@formidable/monorepo-tools-pnpm-wireit-dogs-core": "^0.0.3"
+    "@formidable/monorepo-tools-pnpm-wireit-dogs-core": "^0.0.5"
   }
 }

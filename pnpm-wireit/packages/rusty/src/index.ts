@@ -5,4 +5,4 @@ const RUSTY = dogs.find(({ name }) => name === "Rusty");
 
 welcome(RUSTY);
 
-// Sample comment change.
+// Sample comment change. Number 2.

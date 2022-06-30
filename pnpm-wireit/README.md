@@ -38,7 +38,7 @@ Our official release path is to use automation to perform the actual publishing 
 
 1. A human developer adds a changeset. Ideally this is as a part of a PR that will have a version impact on a package.
 2. On merge of a PR our automation system opens a "Version Packages" PR.
-3. On merging the "Version Packages PR, the automation system publishes the packages.
+3. On merging the "Version Packages" PR, the automation system publishes the packages.
 
 Here are more details:
 

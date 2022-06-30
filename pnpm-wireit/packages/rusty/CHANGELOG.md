@@ -1,5 +1,18 @@
 # @formidable/monorepo-tools-pnpm-wireit-dogs-rusty
 
+## 0.2.0
+
+### Minor Changes
+
+- This should be minor, not patch for rusty. ([#20](https://github.com/FormidableLabs/monorepo-infra-experiments/pull/20))
+
+### Patch Changes
+
+- Minor comment change for rusty ([#18](https://github.com/FormidableLabs/monorepo-infra-experiments/pull/18))
+
+- Updated dependencies []:
+  - @formidable/monorepo-tools-pnpm-wireit-dogs-core@0.2.0
+
 ## 0.1.0
 
 ### Patch Changes

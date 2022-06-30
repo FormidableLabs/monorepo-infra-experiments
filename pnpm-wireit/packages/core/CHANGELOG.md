@@ -1,5 +1,7 @@
 # @formidable/monorepo-tools-pnpm-wireit-dogs-core
 
+## 0.2.0
+
 ## 0.1.1
 
 ### Patch Changes

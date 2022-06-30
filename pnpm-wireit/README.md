@@ -50,7 +50,13 @@ When you would like to add a changeset (which creates a file indicating the type
 $ pnpm changeset
 ```
 
-to produce an interactive menu. Navigate the packages with arrow keys and hit `<space>` to select 1+ packages. Hit `<return>` when done. Select semver versions for packages and add appropriate messages. From there, you'll get a summary to approve. After this, you'll see a new uncommitted file in `.changesets` like:
+to produce an interactive menu. Navigate the packages with arrow keys and hit `<space>` to select 1+ packages. Hit `<return>` when done. Select semver versions for packages and add appropriate messages. From there, you'll be prompted to enter a summary of the change. Some tips for this summary:
+
+1. Aim for a single line, 1+ sentences as appropriate.
+2. Include issue links in GH format (e.g. `#123`).
+3. You don't need to reference the current pull request or whatnot, as that will be added later automatically.
+
+After this, you'll see a new uncommitted file in `.changesets` like:
 
 ```sh
 $ git status

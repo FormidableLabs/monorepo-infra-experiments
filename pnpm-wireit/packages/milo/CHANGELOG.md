@@ -1,5 +1,12 @@
 # @formidable/monorepo-tools-pnpm-wireit-dogs-milo
 
+## 0.2.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @formidable/monorepo-tools-pnpm-wireit-dogs-core@0.2.0
+
 ## 0.1.0
 
 ### Patch Changes

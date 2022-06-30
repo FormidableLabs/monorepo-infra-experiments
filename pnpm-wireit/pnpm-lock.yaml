@@ -1,7 +1,5 @@
 lockfileVersion: 5.4
 
-patchedDependencies: {}
-
 importers:
 
   .:
@@ -29,7 +27,7 @@ importers:
   packages/beau:
     specifiers:
       '@formidable/dogs': ^1.2.0
-      '@formidable/monorepo-tools-pnpm-wireit-dogs-core': ^0.1.0
+      '@formidable/monorepo-tools-pnpm-wireit-dogs-core': ^0.2.0
     dependencies:
       '@formidable/dogs': 1.2.0
       '@formidable/monorepo-tools-pnpm-wireit-dogs-core': link:../core
@@ -40,7 +38,7 @@ importers:
   packages/milo:
     specifiers:
       '@formidable/dogs': ^1.2.0
-      '@formidable/monorepo-tools-pnpm-wireit-dogs-core': ^0.1.0
+      '@formidable/monorepo-tools-pnpm-wireit-dogs-core': ^0.2.0
     dependencies:
       '@formidable/dogs': 1.2.0
       '@formidable/monorepo-tools-pnpm-wireit-dogs-core': link:../core
@@ -48,7 +46,7 @@ importers:
   packages/rusty:
     specifiers:
       '@formidable/dogs': ^1.2.0
-      '@formidable/monorepo-tools-pnpm-wireit-dogs-core': ^0.1.0
+      '@formidable/monorepo-tools-pnpm-wireit-dogs-core': ^0.2.0
     dependencies:
       '@formidable/dogs': 1.2.0
       '@formidable/monorepo-tools-pnpm-wireit-dogs-core': link:../core
@@ -66,7 +64,6 @@ packages:
   /@babel/cli/7.17.10_@babel+core@7.18.5:
     resolution: {integrity: sha512-OygVO1M2J4yPMNOW9pb+I6kFGpQK77HmG44Oz3hg8xQIl5L/2zq+ZohwAdSaqYgVwM0SfmPHZHphH4wR8qzVYw==}
     engines: {node: '>=6.9.0'}
-    hasBin: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -2492,7 +2489,6 @@ packages:
 
   /update-browserslist-db/1.0.3_browserslist@4.21.0:
     resolution: {integrity: sha512-ufSazemeh9Gty0qiWtoRpJ9F5Q5W3xdIPm1UZQqYQv/q0Nyb9EMHUB2lu+O9x1re9WsorpMAUu4Y6Lxcs5n+XQ==}
-    hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
     dependencies:

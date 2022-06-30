@@ -19,7 +19,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node-version: [18.x]
+        node-version: [16.x, 18.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -28,6 +28,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+
+      - name: TODO TEMP DBEUG REMOVE
+        run: "echo ACTIONS_CACHE_URL=$ACTIONS_CACHE_URL"
 
       # Wireit cache
       - uses: google/wireit@setup-github-actions-caching/v1
@@ -57,3 +60,6 @@ jobs:
 
       - name: Build
         run: pnpm run build
+
+      # Cache artifact
+      -

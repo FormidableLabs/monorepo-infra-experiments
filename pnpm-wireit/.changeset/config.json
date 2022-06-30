@@ -1,6 +1,6 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@2.0.0/schema.json",
-  "changelog": ["@changesets/changelog-github", { "repo": "FormidableLabs/monorepo-infra-experiments" }],
+  "changelog": ["@svitejs/changesets-changelog-github-compact", { "repo": "FormidableLabs/monorepo-infra-experiments" }],
   "access": "public",
   "baseBranch": "main",
   "fixed": [["@formidable/monorepo-tools-pnpm-wireit-dogs-*"]]

@@ -4,3 +4,5 @@ import dogs from "@formidable/dogs";
 const RUSTY = dogs.find(({ name }) => name === "Rusty");
 
 welcome(RUSTY);
+
+// Sample comment change.

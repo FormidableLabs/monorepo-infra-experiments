@@ -30,7 +30,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: TODO TEMP DBEUG REMOVE
-        run: "echo ACTIONS_CACHE_URL=$ACTIONS_CACHE_URL"
+        run: echo "ACTIONS_CACHE_URL=$ACTIONS_CACHE_URL"
 
       # Wireit cache
       - uses: google/wireit@setup-github-actions-caching/v1
@@ -60,6 +60,3 @@ jobs:
 
       - name: Build
         run: pnpm run build
-
-      # Cache artifact
-      -

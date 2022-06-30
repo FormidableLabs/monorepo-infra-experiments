@@ -28,7 +28,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-          cache: true
 
       # Wireit cache
       - uses: google/wireit@setup-github-actions-caching/v1

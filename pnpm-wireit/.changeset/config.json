@@ -3,5 +3,5 @@
   "changelog": ["@changesets/changelog-github", { "repo": "FormidableLabs/monorepo-infra-experiments" }],
   "access": "public",
   "baseBranch": "main",
-  "linked": [["@formidable/monorepo-tools-pnpm-wireit-dogs-*"]]
+  "fixed": [["@formidable/monorepo-tools-pnpm-wireit-dogs-*"]]
 }

@@ -47,7 +47,7 @@ Here are more details:
 When you would like to add a changeset (which creates a file indicating the type of change), in your branch/PR issue this command:
 
 ```sh
-$ pnpm changeset add
+$ pnpm changeset
 ```
 
 to produce an interactive menu. Navigate the packages with arrow keys and hit `<space>` to select 1+ packages. Hit `<return>` when done. Select semver versions for packages and add appropriate messages. From there, you'll get a summary to approve. After this, you'll see a new uncommitted file in `.changesets` like:
@@ -74,7 +74,7 @@ On the merge of a version packages PR, the changesets GitHub action will publish
 
 For exceptional circumstances, here is a quick guide to manually publishing from a local computer using changesets.
 
-1. Add a changeset with `pnpm changeset add`. Add changeset file, review file, tweak, and commit.
+1. Add a changeset with `pnpm changeset`. Add changeset file, review file, tweak, and commit.
 2. Make a version. Due to our `changesets/changelog-github` package you will need to create a personal token and pass it to the environment.
 
     ```sh

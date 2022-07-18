@@ -17,7 +17,7 @@ module.exports = {
     "build:esm": "babel src --out-dir es --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js",
     "build:cjs": "BABEL_ENV=commonjs babel src --out-dir lib --config-file ../../.babelrc.js --copy-files --extensions .tsx,.ts,.jsx,.js",
     "clean": "rm -rf es lib",
-    "publish:dry-run": `git tag -a v${coreVersion} -m \"Version ${coreVersion}\" && pnpm -r publish --access public`,
+    "publish": `git tag -a v${coreVersion} -m \"Version ${coreVersion}\" && pnpm -r publish --access public`,
     "publish:dry-run": `echo git tag -a v${coreVersion} -m \"Version ${coreVersion}\" && pnpm -r publish --access public --dry-run`
   }
 };

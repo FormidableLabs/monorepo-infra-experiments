@@ -102,13 +102,13 @@ For exceptional circumstances, here is a quick guide to manually publishing from
 
     ```sh
     # Test things out first
-    $ pnpm run publish:dry-run
-    # If your git branch is dirty (and yes, with two `--`s!)
-    $ pnpm run publish:dry-run -- -- --no-git-checks
+    $ pnpm -r publish --dry-run
 
     # The real publish
-    $ pnpm run publish -- -- --otp=<insert otp code>
+    $ pnpm changeset publish --otp=<insert otp code>
     ```
+
+    Note that publishing multiple pacakges via `changeset` to npm with an OTP code can often fail with `429 Too Many Requests` rate limiting error. Take a 5+ minute coffee break, then come back and try again.
 
     Then issue the following to also push git tags:
 

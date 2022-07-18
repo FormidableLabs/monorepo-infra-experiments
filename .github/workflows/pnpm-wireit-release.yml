@@ -50,9 +50,6 @@ jobs:
       - name: Build packages
         run: pnpm run clean && pnpm run build
 
-      - name: Add npm token for publishing
-        run: echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > .npmrc
-
       - name: PR or Publish
         id: changesets
         uses: changesets/action@v1
@@ -60,7 +57,7 @@ jobs:
           # Not needed in normal project. Looks like working-directory is ignored.
           cwd: ./pnpm-wireit
           version: pnpm run version
-          publish: pnpm run publish
+          publish: pnpm changeset publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

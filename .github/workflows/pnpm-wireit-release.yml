@@ -50,9 +50,6 @@ jobs:
       - name: Build packages
         run: pnpm run clean && pnpm run build
 
-      - name: Add npm token for publishing
-        run: echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > .npmrc
-
       - name: PR or Publish
         id: changesets
         uses: changesets/action@v1

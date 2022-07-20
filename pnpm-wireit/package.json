@@ -16,6 +16,7 @@
   "homepage": "https://github.com/FormidableLabs/monorepo-infra-experiments#readme",
   "scripts": {
     "version": "pnpm changeset version && pnpm install --fix-lockfile",
+    "publish": "nps git:tag && pnpm changeset publish --no-git-tag",
     "changeset": "changeset",
     "build": "pnpm -r run build",
     "build:watch": "pnpm --parallel run build --watch",

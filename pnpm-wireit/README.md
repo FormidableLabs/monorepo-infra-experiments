@@ -105,7 +105,8 @@ For exceptional circumstances, here is a quick guide to manually publishing from
     $ pnpm -r publish --dry-run
 
     # The real publish
-    $ pnpm changeset publish --otp=<insert otp code>
+    # This first does a single git tag (if not already present), then publishes
+    $ pnpm run publish --otp=<insert otp code>
     ```
 
     Note that publishing multiple pacakges via `changeset` to npm with an OTP code can often fail with `429 Too Many Requests` rate limiting error. Take a 5+ minute coffee break, then come back and try again.

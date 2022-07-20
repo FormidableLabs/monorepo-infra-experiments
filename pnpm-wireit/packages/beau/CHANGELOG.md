@@ -1,5 +1,14 @@
 # @formidable/monorepo-tools-pnpm-wireit-dogs-beau
 
+## 0.2.1
+
+### Patch Changes
+
+- Change for beau. ([#24](https://github.com/FormidableLabs/monorepo-infra-experiments/pull/24))
+
+- Updated dependencies []:
+  - @formidable/monorepo-tools-pnpm-wireit-dogs-core@0.2.1
+
 ## 0.2.0
 
 ### Patch Changes

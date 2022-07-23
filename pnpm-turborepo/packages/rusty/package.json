@@ -1,0 +1,66 @@
+{
+  "name": "@formidable/monorepo-tools-pnpm-turborepo-dogs-rusty",
+  "version": "0.2.1",
+  "description": "Rusty",
+  "bin": "./lib/index.js",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FormidableLabs/monorepo-infra-experiments.git"
+  },
+  "author": "Ryan Roemer <ryan.roemer@formidable.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FormidableLabs/monorepo-infra-experiments/issues"
+  },
+  "homepage": "https://github.com/FormidableLabs/monorepo-infra-experiments#readme",
+  "exports": {
+    ".": {
+      "import": "./es/index.js",
+      "default": "./lib/index.js"
+    }
+  },
+  "scripts": {
+    "build": "echo TODO TURBO wireit",
+    "build:esm": "echo TODO TURBO wireit",
+    "build:cjs": "echo TODO TURBO wireit"
+  },
+  "TODO TURBO wireit": {
+    "build": {
+      "dependencies": [
+        "build:esm",
+        "build:cjs"
+      ]
+    },
+    "build:esm": {
+      "command": "nps build:esm",
+      "files": [
+        "src/**",
+        "../../.babelrc.js"
+      ],
+      "output": [
+        "es/**"
+      ],
+      "dependencies": [
+        "../core:build"
+      ]
+    },
+    "build:cjs": {
+      "command": "nps build:cjs",
+      "files": [
+        "src/**",
+        "../../.babelrc.js"
+      ],
+      "output": [
+        "lib/**"
+      ],
+      "dependencies": [
+        "../core:build"
+      ]
+    }
+  },
+  "dependencies": {
+    "@formidable/dogs": "^1.2.0",
+    "@formidable/monorepo-tools-pnpm-turborepo-dogs-core": "^0.2.1"
+  }
+}

@@ -15,12 +15,9 @@
   },
   "homepage": "https://github.com/FormidableLabs/monorepo-infra-experiments#readme",
   "scripts": {
-    "version": "pnpm changeset version && pnpm install --fix-lockfile",
-    "publish": "nps git:tag && pnpm changeset publish --no-git-tag",
-    "changeset": "changeset",
-    "build": "pnpm -r run build",
-    "build:watch": "pnpm --parallel run build --watch",
-    "clean": "pnpm --parallel exec nps clean"
+    "build": "echo TODO TURBO pnpm -r run build",
+    "build:watch": "echo TODO TURBO pnpm --parallel run build --watch",
+    "clean": "echo TODO TURBO pnpm --parallel exec nps clean"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.10",
@@ -28,9 +25,7 @@
     "@babel/plugin-transform-modules-commonjs": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
     "@babel/preset-typescript": "^7.17.12",
-    "@changesets/cli": "^2.23.0",
-    "@svitejs/changesets-changelog-github-compact": "^0.1.1",
     "nps": "^5.10.0",
-    "wireit": "^0.7.0"
+    "turborepo": "^0.0.1"
   }
 }

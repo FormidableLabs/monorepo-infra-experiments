@@ -9,6 +9,7 @@ npm-debug.log*
 yarn-error.log*
 
 .wireit
+.turbo
 
 es/
 lib/

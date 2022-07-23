@@ -21,36 +21,8 @@
     }
   },
   "scripts": {
-    "build": "echo TODO TURBO wireit",
-    "build:esm": "echo TODO TURBO wireit",
-    "build:cjs": "echo TODO TURBO wireit"
-  },
-  "TODO TURBO wireit": {
-    "build": {
-      "dependencies": [
-        "build:esm",
-        "build:cjs"
-      ]
-    },
-    "build:esm": {
-      "command": "nps build:esm",
-      "files": [
-        "src/**",
-        "../../.babelrc.js"
-      ],
-      "output": [
-        "es/**"
-      ]
-    },
-    "build:cjs": {
-      "command": "nps build:cjs",
-      "files": [
-        "src/**",
-        "../../.babelrc.js"
-      ],
-      "output": [
-        "lib/**"
-      ]
-    }
+    "build": "pnpm exec nps build:esm && pnpm exec nps build:cjs",
+    "build:esm": "nps build:esm",
+    "build:cjs": "nps build:cjs"
   }
 }
